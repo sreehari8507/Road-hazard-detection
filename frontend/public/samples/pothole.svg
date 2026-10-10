@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="road" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0B0F19" />
+    </linearGradient>
+    <radialGradient id="potholeDepth" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="70%" stop-color="#090D16" />
+      <stop offset="100%" stop-color="#334155" />
+    </radialGradient>
+  </defs>
+  <!-- Horizon & Sky -->
+  <rect width="800" height="180" fill="url(#sky)" />
+  <!-- Road Surface Perspective -->
+  <polygon points="260,180 540,180 780,450 20,450" fill="url(#road)" />
+  <!-- Road Lane Markings -->
+  <line x1="400" y1="180" x2="400" y2="450" stroke="#F8FAFC" stroke-width="6" stroke-dasharray="25,25" opacity="0.6" />
+  <line x1="330" y1="180" x2="160" y2="450" stroke="#94A3B8" stroke-width="3" opacity="0.4" />
+  <line x1="470" y1="180" x2="640" y2="450" stroke="#94A3B8" stroke-width="3" opacity="0.4" />
+  <!-- Asphalt Texture Details -->
+  <circle cx="360" cy="280" r="1.5" fill="#475569" />
+  <circle cx="480" cy="340" r="2" fill="#475569" />
+  <circle cx="290" cy="390" r="2.5" fill="#475569" />
+  <!-- The Pothole Crater -->
+  <ellipse cx="380" cy="310" rx="65" ry="32" fill="url(#potholeDepth)" stroke="#475569" stroke-width="3" />
+  <!-- Broken Asphalt Fragments Inside Rim -->
+  <polygon points="340,305 355,312 348,318 335,310" fill="#1E293B" />
+  <polygon points="410,312 428,308 420,320 405,315" fill="#334155" />
+  <polygon points="375,325 390,322 385,330 370,328" fill="#1E293B" />
+  <!-- HUD Perspective Lines -->
+  <line x1="0" y1="180" x2="800" y2="180" stroke="#00E5FF" stroke-width="1" opacity="0.25" stroke-dasharray="5,5" />
+</svg>

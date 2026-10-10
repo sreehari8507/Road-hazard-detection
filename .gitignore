@@ -1,0 +1,22 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Node dependencies and generated output
+node_modules/
+dist/
+build/
+.next/
+
+# Python generated files and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local databases and logs
+*.db
+*.sqlite
+*.sqlite3
+*.log

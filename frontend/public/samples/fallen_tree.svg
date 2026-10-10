@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#030712" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="road3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1F2937" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="bark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B2618" />
+      <stop offset="50%" stop-color="#543A26" />
+      <stop offset="100%" stop-color="#271A10" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="180" fill="url(#sky3)" />
+  <polygon points="260,180 540,180 780,450 20,450" fill="url(#road3)" />
+  <line x1="400" y1="180" x2="400" y2="450" stroke="#F8FAFC" stroke-width="6" stroke-dasharray="25,25" opacity="0.6" />
+  
+  <!-- Massive Fallen Tree Trunk Spanning Across Road -->
+  <path d="M 120,330 Q 380,270 680,290 L 685,325 Q 380,310 115,370 Z" fill="url(#bark)" stroke="#1F150D" stroke-width="3" />
+  <!-- Broken Branch Splinters -->
+  <polygon points="280,285 305,250 315,282" fill="#543A26" stroke="#271A10" stroke-width="2" />
+  <polygon points="460,280 475,235 490,275" fill="#3B2618" stroke="#1F150D" stroke-width="2" />
+  <polygon points="560,290 600,240 605,295" fill="#543A26" stroke="#271A10" stroke-width="2" />
+  <!-- Canopy Foliage / Leaves obstructing lane -->
+  <circle cx="210" cy="330" r="35" fill="#14532D" opacity="0.85" />
+  <circle cx="240" cy="310" r="45" fill="#166534" opacity="0.9" />
+  <circle cx="270" cy="340" r="38" fill="#15803D" opacity="0.8" />
+  <circle cx="590" cy="270" r="32" fill="#14532D" opacity="0.85" />
+  <circle cx="630" cy="260" r="40" fill="#166534" opacity="0.9" />
+
+  <line x1="0" y1="180" x2="800" y2="180" stroke="#EF4444" stroke-width="1" opacity="0.4" stroke-dasharray="6,6" />
+</svg>

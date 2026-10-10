@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="road2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0B0F19" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="180" fill="url(#sky2)" />
+  <polygon points="260,180 540,180 780,450 20,450" fill="url(#road2)" />
+  <line x1="400" y1="180" x2="400" y2="450" stroke="#F8FAFC" stroke-width="6" stroke-dasharray="25,25" opacity="0.6" />
+  <line x1="330" y1="180" x2="160" y2="450" stroke="#94A3B8" stroke-width="3" opacity="0.4" />
+  <line x1="470" y1="180" x2="640" y2="450" stroke="#94A3B8" stroke-width="3" opacity="0.4" />
+  
+  <!-- Fallen Cargo Box & Scattered Metal Debris -->
+  <polygon points="410,300 445,290 460,315 425,325" fill="#71717A" stroke="#E4E4E7" stroke-width="2" />
+  <polygon points="410,300 425,325 418,340 402,315" fill="#3F3F46" />
+  <!-- Scattered Rocks / Metal Strips -->
+  <polygon points="360,320 375,315 372,326 358,324" fill="#A1A1AA" />
+  <polygon points="470,335 490,332 485,342 468,340" fill="#71717A" />
+  <polygon points="390,345 405,342 400,352 388,349" fill="#52525B" />
+  
+  <line x1="0" y1="180" x2="800" y2="180" stroke="#00E5FF" stroke-width="1" opacity="0.25" stroke-dasharray="5,5" />
+</svg>

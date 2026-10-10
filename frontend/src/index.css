@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: #f6f3fb;
+    color: #31254a;
+    font-family: 'DM Sans', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #070A0F;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00E5FF;
+  }
+}
+
+/* Calm driving-product theme: white surfaces, lavender navigation, restrained risk colour. */
+[class*="bg-[#070A0F]"], [class*="bg-[#090D15]"], [class*="bg-[#060911]"],
+[class*="bg-[#070B14]"], [class*="bg-[#070D18]"] {
+  background-color: #f6f3fb !important;
+}
+[class*="bg-slate-950"] { background-color: #ffffff !important; }
+[class*="bg-slate-900"] { background-color: #fbfaff !important; }
+[class*="bg-slate-800"] { background-color: #f0ebfa !important; }
+[class*="bg-slate-700"] { background-color: #e5dcf2 !important; }
+[class*="border-slate-800"], [class*="border-slate-700"] { border-color: #e5dcf2 !important; }
+[class*="text-white"] { color: #31254a !important; }
+[class*="text-slate-100"], [class*="text-slate-200"] { color: #46375f !important; }
+[class*="text-slate-300"], [class*="text-slate-400"] { color: #77688d !important; }
+[class*="text-cyan-400"], [class*="text-cyan-300"] { color: #7652d6 !important; }
+[class*="bg-cyan-500"] { background-color: #8b63e8 !important; }
+[class*="border-cyan-500"] { border-color: #bda8f4 !important; }
+[class*="shadow-cyan"] { box-shadow: 0 8px 24px rgba(118, 82, 214, 0.16) !important; }
+.hud-panel, .hud-panel-cyan { background: #ffffff; border-color: #e5dcf2; box-shadow: 0 10px 30px rgba(69, 44, 116, 0.08); }
+
+/* Futuristic HUD Grid & Glows */
+.hud-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 229, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+}
+
+.hud-panel {
+  background: rgba(13, 18, 29, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 41, 59, 0.8);
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.4);
+}
+
+.hud-panel-cyan {
+  background: rgba(13, 18, 29, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 20px -3px rgba(0, 229, 255, 0.15);
+}
+
+.hud-panel-red {
+  background: rgba(26, 12, 16, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  box-shadow: 0 0 25px -3px rgba(239, 68, 68, 0.25);
+}
+
+.glow-cyan {
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.6));
+}
+
+.glow-red {
+  filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.8));
+}
+
+.laser-beam {
+  box-shadow: 0 0 20px #EF4444, 0 0 40px #EF4444, 0 0 80px #EF4444;
+}
+
+/* Scanner Animation */
+@keyframes hudScan {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.8;
+  }
+}
+
+.animate-hud-scan {
+  animation: hudScan 2.8s ease-in-out infinite alternate;
+}
+
+/* OPTIC BLAST CINEMATIC INTRO ANIMATIONS */
+@keyframes opticRumble {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  15% { transform: translate(-4px, 3px) rotate(-0.5deg); }
+  30% { transform: translate(4px, -3px) rotate(0.5deg); }
+  45% { transform: translate(-3px, -2px) rotate(-0.3deg); }
+  60% { transform: translate(3px, 3px) rotate(0.3deg); }
+  75% { transform: translate(-2px, 1px) rotate(-0.2deg); }
+  90% { transform: translate(2px, -2px) rotate(0.2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.animate-optic-rumble {
+  animation: opticRumble 0.12s linear infinite;
+}
+
+@keyframes speedZoom {
+  0% { transform: scale(1.0); }
+  100% { transform: scale(1.08); }
+}
+
+.animate-speed-zoom {
+  animation: speedZoom 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes opticPulse {
+  0%, 100% { opacity: 0.7; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.animate-optic-pulse {
+  animation: opticPulse 0.4s ease-in-out infinite;
+}
+
